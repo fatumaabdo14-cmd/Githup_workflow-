@@ -1,0 +1,16 @@
+name: my github workflow
+
+on: [push]
+
+jobs:
+  testing_github_workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: hello
+        run: echo Hello, world!
+      - name: Display repository name
+        run: echo "this workflow is running in the repository: ${{ github.repository }}"
+          
+  
+   
